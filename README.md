@@ -11,7 +11,7 @@ gdalwarp -cutline clipper.shp -crop_to_cutline -co COMPRESS=LZW -co PREDICTOR=2 
 
 Draw the river centerline
 
-Run process.py
+Run rem.py
 
 Example from the Mississippi Oxbow SNA (Science and Natural Area)
 ![image](https://github.com/user-attachments/assets/d4b93c9f-526b-45ef-b3c0-49d08fd469ab)
