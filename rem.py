@@ -13,6 +13,7 @@ def points_along_line(geom, space):
 
 
 def get_point_elevation(points, raster):
+    # thank you https://gis.stackexchange.com/a/46898
     src_ds = gdal.Open(raster)
     gt_forward = src_ds.GetGeoTransform()
     gt_reverse = gdal.InvGeoTransform(gt_forward)
@@ -30,6 +31,7 @@ def get_point_elevation(points, raster):
 
 
 def idw(input_shapefile, output_tif, bounds, width, height):
+    # thank you https://www.youtube.com/watch?v=FSnJ2VXNV3c
     gdal.Grid(
         output_tif,
         input_shapefile,
