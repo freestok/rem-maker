@@ -7,7 +7,7 @@ from osgeo_utils import gdal_calc
 
 
 def points_along_line(geom, space):
-    ln = geom.length
+    ln = int(geom.length)
     points = [geom.interpolate(distance) for distance in range(0, ln, space)]
     return points
 
